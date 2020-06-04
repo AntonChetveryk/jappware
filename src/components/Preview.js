@@ -1,6 +1,6 @@
 import React from "react";
 //import styled from "styled-components";
-import Field from "./Field";
+import Component from "./Component";
 
 // const WrapperPreview = styled.section``;
 
@@ -10,7 +10,9 @@ export default class Preview extends React.Component {
     return (
       <>
         {components.map((component) => (
-          <Field
+          <Component
+            className="d-flex flex-column"
+            labelText={component.message}
             id={component.message}
             type={component.type}
             placeholder={component.type}

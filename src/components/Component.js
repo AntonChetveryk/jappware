@@ -1,7 +1,16 @@
 import React from "react";
 
-const Field = (props) => {
-  const { id, labelText, type, placeholder, name, value, onChange } = props;
+const Component = (props) => {
+  const {
+    id,
+    labelText,
+    type,
+    placeholder,
+    name,
+    value,
+    onChange,
+    className,
+  } = props;
   return (
     <div>
       <label htmlFor={id}>{labelText}</label>
@@ -12,9 +21,10 @@ const Field = (props) => {
         name={name}
         value={value}
         onChange={onChange}
+        className={className}
       />
     </div>
   );
 };
 
-export default Field;
+export default Component;
