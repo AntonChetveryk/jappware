@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Field from "./Component";
+import Field from "./Field";
 
 const Wrapper = styled.section`
   display: flex;

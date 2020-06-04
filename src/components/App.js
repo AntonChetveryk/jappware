@@ -58,7 +58,7 @@ class App extends React.Component {
               </form>
             </div>
             <div className="preview col-6">
-              <h2> Components preview</h2>
+              <h2>Components preview</h2>
               <Preview components={components} />
             </div>
           </div>

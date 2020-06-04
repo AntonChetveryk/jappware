@@ -1,6 +1,6 @@
 import React from "react";
 
-const Component = (props) => {
+const Field = (props) => {
   const {
     id,
     labelText,
@@ -27,4 +27,4 @@ const Component = (props) => {
   );
 };
 
-export default Component;
+export default Field;
