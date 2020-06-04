@@ -1,0 +1,13 @@
+html,
+body {
+  box-sizing: border-box;
+}
+
+.config,
+.preview {
+  height: 100vh;
+}
+
+.config {
+  border-right: 2px solid black;
+}
