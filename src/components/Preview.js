@@ -18,7 +18,7 @@ export default class Preview extends React.Component {
               type={component.type}
               placeholder={component.type}
             />
-            <button className="btn-light delete">delete</button>
+            <button className="btn btn-light delete ml-2">delete</button>
           </div>
         ))}
       </>
