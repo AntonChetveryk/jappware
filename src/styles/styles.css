@@ -11,3 +11,8 @@ body {
 .config {
   border-right: 2px solid black;
 }
+
+.delete {
+  height: fit-content;
+  align-self: flex-end;
+}

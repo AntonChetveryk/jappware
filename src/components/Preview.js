@@ -10,13 +10,16 @@ export default class Preview extends React.Component {
     return (
       <>
         {components.map((component) => (
-          <Component
-            className="d-flex flex-column"
-            labelText={component.message}
-            id={component.message}
-            type={component.type}
-            placeholder={component.type}
-          />
+          <div className="d-flex">
+            <Component
+              className="d-flex flex-column"
+              labelText={component.message}
+              id={component.message}
+              type={component.type}
+              placeholder={component.type}
+            />
+            <button className="btn-light delete">delete</button>
+          </div>
         ))}
       </>
     );
