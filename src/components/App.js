@@ -12,7 +12,22 @@ class App extends React.Component {
   };
 
   onClick = (e) => {
+    const { type, message } = this.state;
     e.preventDefault();
+    if (type && message) {
+      this.setState((state) => {
+        return {
+          components: [
+            ...state.components,
+            { type: state.type, message: state.message },
+          ],
+          type: "",
+          message: "",
+        };
+      });
+    } else {
+      alert("fill in all the fields");
+    }
   };
 
   onChange = (e) => {
@@ -23,7 +38,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { type, message } = this.state;
+    const { type, message, components } = this.state;
 
     return (
       <div className="App">
@@ -44,7 +59,7 @@ class App extends React.Component {
             </div>
             <div className="preview col-6">
               <h2> Components preview</h2>
-              <Preview />
+              <Preview components={components} />
             </div>
           </div>
         </div>

@@ -1,26 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+//import styled from "styled-components";
 import Field from "./Field";
 
-const WrapperPreview = styled.section``;
+// const WrapperPreview = styled.section``;
 
 export default class Preview extends React.Component {
   render() {
-    const { values, showElements } = this.props;
+    const { components } = this.props;
     return (
       <>
-        {showElements ? (
-          <WrapperPreview>
-            <label htmlFor="firstInput">{values.firstInput}</label>
-            <Field
-              id="firstInputPreview"
-              type={values.firstSelect}
-              placeholder="Item"
-              name="firstInputPreview"
-            />
-            <label htmlFor="secondInput">{values.secondInput}</label>
-          </WrapperPreview>
-        ) : null}
+        {components.map((component) => (
+          <Field
+            id={component.message}
+            type={component.type}
+            placeholder={component.type}
+          />
+        ))}
       </>
     );
   }
