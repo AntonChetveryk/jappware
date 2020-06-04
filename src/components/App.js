@@ -52,7 +52,7 @@ class App extends React.Component {
                   type={type}
                   message={message}
                 />
-                <button onClick={this.onClick} className="mt-4 btn-dark">
+                <button onClick={this.onClick} className="mt-4 btn btn-dark">
                   Add Components
                 </button>
               </form>
