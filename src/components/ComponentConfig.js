@@ -4,9 +4,10 @@ import Field from "./Component";
 
 const Wrapper = styled.section`
   display: flex;
+  flex-direction: column;
 `;
 
-const types = ["text", "password", "checkbox"];
+const types = ["text", "password", "email", "checkbox", "radio", "range"];
 
 export default class ComponentConfig extends React.Component {
   getOptionsItems = (items) => {
@@ -25,21 +26,42 @@ export default class ComponentConfig extends React.Component {
     ];
   };
 
+  renderSwitch = (param) => {
+    switch (param) {
+      case "radio":
+        return <div>radio</div>;
+      case "checkbox":
+        return <div>checkbox</div>;
+      case "range":
+        return <div>range</div>;
+      default:
+        return null;
+    }
+  };
+
   render() {
     const { type, message, onChange } = this.props;
+
     return (
       <Wrapper>
-        <select id="type" name="type" value={type} onChange={onChange}>
-          {this.getOptionsItems(types)}
-        </select>
-        <Field
-          id="message"
-          type="text"
-          placeholder="message"
-          name="message"
-          value={message}
-          onChange={onChange}
-        />
+        <div className="d-flex mt-4">
+          <select id="type" name="type" value={type} onChange={onChange}>
+            {this.getOptionsItems(types)}
+          </select>
+          <Field
+            id="message"
+            type="text"
+            placeholder="message"
+            name="message"
+            value={message}
+            onChange={onChange}
+          />
+        </div>
+
+        <div className="options mt-4">
+          <h3>Options</h3>
+          {this.renderSwitch(type)}
+        </div>
       </Wrapper>
     );
   }
