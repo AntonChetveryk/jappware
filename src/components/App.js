@@ -8,19 +8,20 @@ class App extends React.Component {
     values: {
       firstSelect: "",
       firstInput: "",
+      secondSelect: "",
+      secondInput: "",
     },
     showElements: false,
   };
 
   onClick = (e) => {
     e.preventDefault();
-    console.log("click");
     this.setShowElements();
   };
 
   setShowElements = () => {
     this.setState((state) => {
-      return { showElements: !state.showElements };
+      return { showElements: true };
     });
   };
 
@@ -31,6 +32,7 @@ class App extends React.Component {
         ...state.values,
         [e.target.name]: e.target.value,
       },
+      showElements: false,
     }));
   };
 
@@ -44,9 +46,22 @@ class App extends React.Component {
             <div className="config col-6">
               <h2> Components config</h2>
               <form>
-                <ComponentConfig onChange={this.onChange} values={values} />
+                <ComponentConfig
+                  onChange={this.onChange}
+                  selectName="firstSelect"
+                  selectValue={values.firstSelect}
+                  inputName="firstInput"
+                  inputValue={values.firstInput}
+                />
+                <ComponentConfig
+                  onChange={this.onChange}
+                  selectName="secondSelect"
+                  selectValue={values.secondSelect}
+                  inputName="secondInput"
+                  inputValue={values.secondInput}
+                />
                 <button onClick={this.onClick} className="mt-4">
-                  {!showElements ? "Add Components" : "Delete component"}
+                  Add Components
                 </button>
               </form>
             </div>

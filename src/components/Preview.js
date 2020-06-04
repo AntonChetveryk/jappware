@@ -10,17 +10,22 @@ export default class Preview extends React.Component {
     return (
       <>
         {showElements ? (
-          values.firstInput && values.firstSelect ? (
-            <WrapperPreview>
-              <label htmlFor="input">{values.firstInput}</label>
-              <Field
-                id="input"
-                type={values.firstSelect}
-                placeholder="Item"
-                name="input"
-              />
-            </WrapperPreview>
-          ) : null
+          <WrapperPreview>
+            <label htmlFor="firstInput">{values.firstInput}</label>
+            <Field
+              id="firstInputPreview"
+              type={values.firstSelect}
+              placeholder="Item"
+              name="firstInputPreview"
+            />
+            <label htmlFor="secondInput">{values.secondInput}</label>
+            <Field
+              id="secondInputPreview"
+              type={values.secondSelect}
+              placeholder="Item"
+              name="secondInputPreview"
+            />
+          </WrapperPreview>
         ) : null}
       </>
     );

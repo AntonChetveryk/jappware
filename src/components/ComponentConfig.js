@@ -6,7 +6,7 @@ const Wrapper = styled.section`
   display: flex;
 `;
 
-const types = ["text", "password"];
+const types = ["text", "password", "checkbox"];
 
 export default class ComponentConfig extends React.Component {
   getOptionsItems = (items) => {
@@ -26,23 +26,29 @@ export default class ComponentConfig extends React.Component {
   };
 
   render() {
-    const { values, onChange } = this.props;
+    const {
+      selectName,
+      selectValue,
+      inputName,
+      inputValue,
+      onChange,
+    } = this.props;
     return (
       <Wrapper>
         <select
-          id="firstSelect"
-          name="firstSelect"
-          value={values.firstSelect}
+          id={selectName}
+          name={selectName}
+          value={selectValue}
           onChange={onChange}
         >
           {this.getOptionsItems(types)}
         </select>
         <Field
-          id="firstInput"
+          id={inputName}
           type="text"
           placeholder="text"
-          name="firstInput"
-          value={values.firstInput}
+          name={inputName}
+          value={inputValue}
           onChange={onChange}
         />
       </Wrapper>
