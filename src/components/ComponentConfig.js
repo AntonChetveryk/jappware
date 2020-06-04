@@ -26,29 +26,18 @@ export default class ComponentConfig extends React.Component {
   };
 
   render() {
-    const {
-      selectName,
-      selectValue,
-      inputName,
-      inputValue,
-      onChange,
-    } = this.props;
+    const { type, message, onChange } = this.props;
     return (
       <Wrapper>
-        <select
-          id={selectName}
-          name={selectName}
-          value={selectValue}
-          onChange={onChange}
-        >
+        <select id="type" name="type" value={type} onChange={onChange}>
           {this.getOptionsItems(types)}
         </select>
         <Field
-          id={inputName}
+          id="message"
           type="text"
-          placeholder="text"
-          name={inputName}
-          value={inputValue}
+          placeholder="message"
+          name="message"
+          value={message}
           onChange={onChange}
         />
       </Wrapper>

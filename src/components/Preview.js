@@ -19,12 +19,6 @@ export default class Preview extends React.Component {
               name="firstInputPreview"
             />
             <label htmlFor="secondInput">{values.secondInput}</label>
-            <Field
-              id="secondInputPreview"
-              type={values.secondSelect}
-              placeholder="Item"
-              name="secondInputPreview"
-            />
           </WrapperPreview>
         ) : null}
       </>

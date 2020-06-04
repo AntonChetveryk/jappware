@@ -5,39 +5,25 @@ import Preview from "./Preview";
 
 class App extends React.Component {
   state = {
-    values: {
-      firstSelect: "",
-      firstInput: "",
-      secondSelect: "",
-      secondInput: "",
-    },
-    showElements: false,
+    type: "",
+    message: "",
+    components: [],
+    options: {},
   };
 
   onClick = (e) => {
     e.preventDefault();
-    this.setShowElements();
-  };
-
-  setShowElements = () => {
-    this.setState((state) => {
-      return { showElements: true };
-    });
   };
 
   onChange = (e) => {
     e.persist();
     this.setState((state) => ({
-      values: {
-        ...state.values,
-        [e.target.name]: e.target.value,
-      },
-      showElements: false,
+      [e.target.name]: e.target.value,
     }));
   };
 
   render() {
-    const { values, showElements } = this.state;
+    const { type, message } = this.state;
 
     return (
       <div className="App">
@@ -48,17 +34,8 @@ class App extends React.Component {
               <form>
                 <ComponentConfig
                   onChange={this.onChange}
-                  selectName="firstSelect"
-                  selectValue={values.firstSelect}
-                  inputName="firstInput"
-                  inputValue={values.firstInput}
-                />
-                <ComponentConfig
-                  onChange={this.onChange}
-                  selectName="secondSelect"
-                  selectValue={values.secondSelect}
-                  inputName="secondInput"
-                  inputValue={values.secondInput}
+                  type={type}
+                  message={message}
                 />
                 <button onClick={this.onClick} className="mt-4">
                   Add Components
@@ -67,7 +44,7 @@ class App extends React.Component {
             </div>
             <div className="preview col-6">
               <h2> Components preview</h2>
-              <Preview values={values} showElements={showElements} />
+              <Preview />
             </div>
           </div>
         </div>
