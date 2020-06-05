@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/jappware/static/css/main.839de910.chunk.css",
-    "main.js": "/jappware/static/js/main.0976c25d.chunk.js",
-    "main.js.map": "/jappware/static/js/main.0976c25d.chunk.js.map",
+    "main.js": "/jappware/static/js/main.ac671821.chunk.js",
+    "main.js.map": "/jappware/static/js/main.ac671821.chunk.js.map",
     "runtime-main.js": "/jappware/static/js/runtime-main.b589997c.js",
     "runtime-main.js.map": "/jappware/static/js/runtime-main.b589997c.js.map",
     "static/css/2.af3c1da9.chunk.css": "/jappware/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.4a8fa6d6.chunk.js": "/jappware/static/js/2.4a8fa6d6.chunk.js",
-    "static/js/2.4a8fa6d6.chunk.js.map": "/jappware/static/js/2.4a8fa6d6.chunk.js.map",
+    "static/js/2.82711a7c.chunk.js": "/jappware/static/js/2.82711a7c.chunk.js",
+    "static/js/2.82711a7c.chunk.js.map": "/jappware/static/js/2.82711a7c.chunk.js.map",
     "index.html": "/jappware/index.html",
-    "precache-manifest.29a646091301676c787c6ac3a3ab61f2.js": "/jappware/precache-manifest.29a646091301676c787c6ac3a3ab61f2.js",
+    "precache-manifest.d3b0307d5f4b5899a93f8c9570c3a81f.js": "/jappware/precache-manifest.d3b0307d5f4b5899a93f8c9570c3a81f.js",
     "service-worker.js": "/jappware/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/jappware/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.839de910.chunk.css.map": "/jappware/static/css/main.839de910.chunk.css.map",
-    "static/js/2.4a8fa6d6.chunk.js.LICENSE.txt": "/jappware/static/js/2.4a8fa6d6.chunk.js.LICENSE.txt"
+    "static/js/2.82711a7c.chunk.js.LICENSE.txt": "/jappware/static/js/2.82711a7c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b589997c.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.4a8fa6d6.chunk.js",
+    "static/js/2.82711a7c.chunk.js",
     "static/css/main.839de910.chunk.css",
-    "static/js/main.0976c25d.chunk.js"
+    "static/js/main.ac671821.chunk.js"
   ]
 }
