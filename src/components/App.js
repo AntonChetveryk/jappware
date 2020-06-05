@@ -5,10 +5,13 @@ import Preview from "./Preview";
 
 class App extends React.Component {
   state = {
-    type: "",
-    message: "",
     components: [],
-    options: {},
+  };
+
+  delete = (index) => {
+    const { components } = this.state;
+    const newComponents = components.filter((component, i) => index !== i);
+    this.setState({ components: newComponents });
   };
 
   onClick = (e) => {
@@ -30,15 +33,18 @@ class App extends React.Component {
     }
   };
 
-  onChange = (e) => {
-    e.persist();
-    this.setState((state) => ({
-      [e.target.name]: e.target.value,
-    }));
+  addComponent = (values) => {
+    this.setState((state) => {
+      return {
+        components: [...state.components, values],
+      };
+    });
   };
 
+  delete;
+
   render() {
-    const { type, message, components } = this.state;
+    const { components } = this.state;
 
     return (
       <div className="App">
@@ -47,19 +53,12 @@ class App extends React.Component {
             <div className="config col-6">
               <h2> Components config</h2>
               <form>
-                <ComponentConfig
-                  onChange={this.onChange}
-                  type={type}
-                  message={message}
-                />
-                <button onClick={this.onClick} className="mt-4 btn btn-dark">
-                  Add Components
-                </button>
+                <ComponentConfig addComponent={this.addComponent} />
               </form>
             </div>
             <div className="preview col-6">
               <h2>Components preview</h2>
-              <Preview components={components} />
+              <Preview components={components} delete={this.delete} />
             </div>
           </div>
         </div>
