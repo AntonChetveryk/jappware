@@ -34,7 +34,8 @@ const inputsConfig = {
   },
   radio: {
     type: "radio",
-    label: "",
+    labelFirst: "",
+    labelSecond: "",
     defaultValue: true,
   },
   range: {
@@ -119,11 +120,12 @@ export default class ComponentConfig extends React.Component {
   };
 
   onAddComponent = (e) => {
+    console.log("add");
     const {
-      values: { label },
+      values: { label, labelSecond, labelFirst },
     } = this.state;
     e.preventDefault();
-    if (label) {
+    if (label || (labelFirst && labelSecond)) {
       this.props.addComponent(this.state.values);
       this.reset();
     }

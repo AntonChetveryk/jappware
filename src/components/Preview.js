@@ -61,14 +61,24 @@ export default class Preview extends React.Component {
                 name={component.label}
               />
             ) : component.type === "radio" ? (
-              <Field
-                className="d-flex flex-column"
-                labelText={component.label}
-                type={component.type}
-                value={this.state[component.label]}
-                onChange={this.onChangeBool}
-                name={component.label}
-              />
+              <>
+                <Field
+                  className="d-flex flex-column"
+                  labelText={component.labelFirst}
+                  type={component.type}
+                  value={this.state[component.labelFirst]}
+                  onChange={this.onChangeBool}
+                  name={component.labelFirst}
+                />
+                <Field
+                  className="d-flex flex-column"
+                  labelText={component.labelSecond}
+                  type={component.type}
+                  value={this.state[component.labelSecond]}
+                  onChange={this.onChangeBool}
+                  name={component.labelFirst}
+                />
+              </>
             ) : null}
 
             <button

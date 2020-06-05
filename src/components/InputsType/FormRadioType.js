@@ -6,9 +6,15 @@ const FormRadioType = (props) => {
   return (
     <div>
       <Field
-        name="label"
-        value={values.label}
-        labelText="Label"
+        name="labelFirst"
+        value={values.labelFirst}
+        labelText="Label1"
+        onChange={onChange}
+      />
+      <Field
+        name="labelSecond"
+        value={values.labelSecond}
+        labelText="Label2"
         onChange={onChange}
       />
     </div>
