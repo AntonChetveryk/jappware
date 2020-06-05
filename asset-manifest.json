@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/jappware/static/css/main.839de910.chunk.css",
-    "main.js": "/jappware/static/js/main.aa78364c.chunk.js",
-    "main.js.map": "/jappware/static/js/main.aa78364c.chunk.js.map",
+    "main.js": "/jappware/static/js/main.0976c25d.chunk.js",
+    "main.js.map": "/jappware/static/js/main.0976c25d.chunk.js.map",
     "runtime-main.js": "/jappware/static/js/runtime-main.b589997c.js",
     "runtime-main.js.map": "/jappware/static/js/runtime-main.b589997c.js.map",
     "static/css/2.af3c1da9.chunk.css": "/jappware/static/css/2.af3c1da9.chunk.css",
     "static/js/2.4a8fa6d6.chunk.js": "/jappware/static/js/2.4a8fa6d6.chunk.js",
     "static/js/2.4a8fa6d6.chunk.js.map": "/jappware/static/js/2.4a8fa6d6.chunk.js.map",
     "index.html": "/jappware/index.html",
-    "precache-manifest.aa7eb376f4704ce38126c25247afe344.js": "/jappware/precache-manifest.aa7eb376f4704ce38126c25247afe344.js",
+    "precache-manifest.29a646091301676c787c6ac3a3ab61f2.js": "/jappware/precache-manifest.29a646091301676c787c6ac3a3ab61f2.js",
     "service-worker.js": "/jappware/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/jappware/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.839de910.chunk.css.map": "/jappware/static/css/main.839de910.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.4a8fa6d6.chunk.js",
     "static/css/main.839de910.chunk.css",
-    "static/js/main.aa78364c.chunk.js"
+    "static/js/main.0976c25d.chunk.js"
   ]
 }
