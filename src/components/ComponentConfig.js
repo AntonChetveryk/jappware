@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Field from "./Field";
+// import Field from "./Field";
+import FormTextType from "./InputsType/FormTextType";
+import FormRangeType from "./InputsType/FormRangeType";
 
 const Wrapper = styled.section`
   display: flex;
@@ -31,30 +33,13 @@ const inputsConfig = {
   range: {
     type: "range",
     min: "0",
-    max: "1",
+    max: "50",
     defaultValue: "0",
     step: "1",
   },
 };
 
 const typesInputs = Object.keys(inputsConfig);
-
-const FormTextType = ({ values, onChange }) => (
-  <div>
-    <Field
-      name="label"
-      value={values.label}
-      labelText="Label"
-      onChange={onChange}
-    />
-    <Field
-      name="defaultValue"
-      value={values.defaultValue}
-      labelText="DefaultValue"
-      onChange={onChange}
-    />
-  </div>
-);
 
 export default class ComponentConfig extends React.Component {
   state = {
@@ -72,6 +57,13 @@ export default class ComponentConfig extends React.Component {
     }
   }
 
+  initValues = (typeInput) => {
+    const values = inputsConfig[typeInput] || {};
+    this.setState({
+      values,
+    });
+  };
+
   onChangeValue = (e) => {
     const { name, value } = e.target;
     this.setState((state) => ({
@@ -80,13 +72,6 @@ export default class ComponentConfig extends React.Component {
         [name]: value,
       },
     }));
-  };
-
-  initValues = (typeInput) => {
-    const values = inputsConfig[typeInput] || {};
-    this.setState({
-      values,
-    });
   };
 
   renderFormByTypeInput = (typeInput) => {
@@ -101,8 +86,16 @@ export default class ComponentConfig extends React.Component {
           />
         );
       case "radio":
+        return <div>radio</div>;
       case "checkbox":
+        return <div>checkbox</div>;
       case "range":
+        return (
+          <FormRangeType
+            values={this.state.values}
+            onChange={this.onChangeValue}
+          />
+        );
       default:
         return null;
     }

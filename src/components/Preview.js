@@ -14,6 +14,8 @@ export default class Preview extends React.Component {
               labelText={component.label}
               type={component.type}
               value={component.defaultValue}
+              min={component.min}
+              max={component.max}
             />
             <button className="btn btn-light delete ml-2">delete</button>
           </div>

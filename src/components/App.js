@@ -35,6 +35,8 @@ class App extends React.Component {
     });
   };
 
+  delete;
+
   render() {
     const { components } = this.state;
 

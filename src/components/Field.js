@@ -10,6 +10,8 @@ const Field = (props) => {
     value,
     onChange,
     className,
+    min,
+    max,
   } = props;
   return (
     <div>
@@ -22,6 +24,8 @@ const Field = (props) => {
         value={value}
         onChange={onChange}
         className={className}
+        min={min}
+        max={max}
       />
     </div>
   );
