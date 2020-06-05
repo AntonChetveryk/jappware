@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c38c9e4f194bf3506c05215e4d90c6f7",
+    "revision": "45815eaf5ed5fcb5e6cadba6cf4a57ea",
     "url": "/jappware/index.html"
   },
   {
-    "revision": "6e09e2a0b7be4a85bb38",
+    "revision": "c81649cc4d8e99a4927b",
     "url": "/jappware/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "467c4a857661f8953987",
+    "revision": "dbd627afae40a1352078",
     "url": "/jappware/static/css/main.839de910.chunk.css"
   },
   {
-    "revision": "6e09e2a0b7be4a85bb38",
-    "url": "/jappware/static/js/2.072d3170.chunk.js"
+    "revision": "c81649cc4d8e99a4927b",
+    "url": "/jappware/static/js/2.4a8fa6d6.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/jappware/static/js/2.072d3170.chunk.js.LICENSE.txt"
+    "url": "/jappware/static/js/2.4a8fa6d6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "467c4a857661f8953987",
-    "url": "/jappware/static/js/main.a14d7caf.chunk.js"
+    "revision": "dbd627afae40a1352078",
+    "url": "/jappware/static/js/main.aa78364c.chunk.js"
   },
   {
     "revision": "0bea329687f12017b324",
