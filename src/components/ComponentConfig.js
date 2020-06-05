@@ -102,10 +102,14 @@ export default class ComponentConfig extends React.Component {
   };
 
   onAddComponent = (e) => {
+    const {
+      values: { label },
+    } = this.state;
     e.preventDefault();
-
-    this.props.addComponent(this.state.values);
-    this.reset();
+    if (label) {
+      this.props.addComponent(this.state.values);
+      this.reset();
+    }
   };
 
   reset = () => {

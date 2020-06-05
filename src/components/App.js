@@ -8,6 +8,12 @@ class App extends React.Component {
     components: [],
   };
 
+  delete = (index) => {
+    const { components } = this.state;
+    const newComponents = components.filter((component, i) => index !== i);
+    this.setState({ components: newComponents });
+  };
+
   onClick = (e) => {
     const { type, message } = this.state;
     e.preventDefault();
@@ -52,7 +58,7 @@ class App extends React.Component {
             </div>
             <div className="preview col-6">
               <h2>Components preview</h2>
-              <Preview components={components} />
+              <Preview components={components} delete={this.delete} />
             </div>
           </div>
         </div>
