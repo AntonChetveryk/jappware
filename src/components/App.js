@@ -6,31 +6,13 @@ import Preview from "./Preview";
 class App extends React.Component {
   state = {
     components: [],
+    previewComponents: [],
   };
 
   delete = (index) => {
     const { components } = this.state;
     const newComponents = components.filter((component, i) => index !== i);
     this.setState({ components: newComponents });
-  };
-
-  onClick = (e) => {
-    const { type, message } = this.state;
-    e.preventDefault();
-    if (type && message) {
-      this.setState((state) => {
-        return {
-          components: [
-            ...state.components,
-            { type: state.type, message: state.message },
-          ],
-          type: "",
-          message: "",
-        };
-      });
-    } else {
-      alert("fill in all the fields");
-    }
   };
 
   addComponent = (values) => {
@@ -40,8 +22,6 @@ class App extends React.Component {
       };
     });
   };
-
-  delete;
 
   render() {
     const { components } = this.state;
