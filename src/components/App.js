@@ -6,7 +6,6 @@ import Preview from "./Preview";
 class App extends React.Component {
   state = {
     components: [],
-    previewComponents: [],
   };
 
   delete = (index) => {
