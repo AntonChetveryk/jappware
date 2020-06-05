@@ -26,6 +26,7 @@ const Field = (props) => {
         className={className}
         min={min}
         max={max}
+        checked={value}
       />
     </div>
   );

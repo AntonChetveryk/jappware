@@ -3,6 +3,8 @@ import styled from "styled-components";
 // import Field from "./Field";
 import FormTextType from "./InputsType/FormTextType";
 import FormRangeType from "./InputsType/FormRangeType";
+import FormCheckboxType from "./InputsType/FormCheckboxType";
+import FormRadioType from "./InputsType/FormRadioType";
 
 const Wrapper = styled.section`
   display: flex;
@@ -28,7 +30,12 @@ const inputsConfig = {
   checkbox: {
     type: "checkbox",
     label: "",
-    defaultChecked: false,
+    defaultValue: true,
+  },
+  radio: {
+    type: "radio",
+    label: "",
+    defaultValue: true,
   },
   range: {
     type: "range",
@@ -86,9 +93,19 @@ export default class ComponentConfig extends React.Component {
           />
         );
       case "radio":
-        return <div>radio</div>;
+        return (
+          <FormRadioType
+            values={this.state.values}
+            onChange={this.onChangeValue}
+          />
+        );
       case "checkbox":
-        return <div>checkbox</div>;
+        return (
+          <FormCheckboxType
+            values={this.state.values}
+            onChange={this.onChangeValue}
+          />
+        );
       case "range":
         return (
           <FormRangeType

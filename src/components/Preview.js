@@ -1,5 +1,4 @@
 import React from "react";
-
 import Field from "./Field";
 
 export default class Preview extends React.Component {
