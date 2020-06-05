@@ -8,7 +8,7 @@ export default class Preview extends React.Component {
 
   onChange = (e) => {
     e.persist();
-    this.setState();
+    consolr.log("onChange");
   };
 
   render() {
